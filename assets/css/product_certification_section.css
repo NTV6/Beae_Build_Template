@@ -1,0 +1,52 @@
+.product-certification-section {
+    padding-bottom: 80px;
+    align-items: center;
+}
+
+.product-certification-section .certification-subtitle {
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    color: var(--front-color);
+}
+
+.product-certification-section .certification-title {
+    font-size: 4.8rem;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 24px;
+}
+
+.product-certification-section .certification-description {
+    font-size: 1.6rem;
+    color: var(--front-color);
+    margin-bottom: 32px;
+}
+
+.product-certification-section .cert {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-certification-section .cert-icons {
+    max-width: 82px;
+}
+
+.product-certification-section .cert-icons img {
+    width: 100%;
+    margin: 0;
+}
+
+.product-certification-section .product-image img {
+    width: 100%;
+    max-height: 552px;
+    border-radius: 4px;
+    object-fit: cover;
+    object-position: 50.81967213114754% 99.1100304525389%;
+}
+
+@media (max-width: 768px) {
+    .product-certification-section .cert-icons {
+        max-width: 100%;
+    }
+}

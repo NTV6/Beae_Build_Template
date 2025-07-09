@@ -1,0 +1,61 @@
+.modal-section {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    background-color: #F0F0F0;
+}
+
+.modal-content img {
+    object-fit: contain;
+}
+
+.close-modal {
+    position: absolute;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    border-radius: 50%;
+    z-index: 30;
+}
+
+.swiperModal {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper-slide img {
+    height: 100%;
+    width: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #955c44;
+}
+
+.custom-pagination {
+    position: absolute;
+    text-align: center;
+    background: white;
+    left: 50%;
+    bottom: 10px;
+    width: 123px;
+    height: 46px;
+    line-height: 46px;
+    border-radius: 999px;
+    font-size: 1.5rem;
+    z-index: 20;
+    transform: translateX(-50%);
+    border: 1px solid #d6d6d6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

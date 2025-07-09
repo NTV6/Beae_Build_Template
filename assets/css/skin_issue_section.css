@@ -1,0 +1,44 @@
+.skin-issue-section {
+    align-items: center;
+    padding: 80px 0;
+}
+
+.skin-issue-section .skin-issue-text {
+    padding: 0;
+}
+
+.skin-issue-section .subheading {
+    text-transform: uppercase;
+    color: var(--front-color);
+    font-size: 1.9rem;
+    margin-bottom: 12px;
+}
+
+.skin-issue-section .main-heading {
+    font-size: 4.8rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    line-height: 5.8rem;
+}
+
+.skin-issue-section .issues-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+    gap: 30px;
+    font-size: 1.6rem;
+}
+
+.skin-issue-section .issue h4 {
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.skin-issue-section .issue p {
+    margin: 0;
+    color: var(--front-color);
+}
+
+.skin-issue-section .skin-issue-image img {
+    width: 100%;
+    border-radius: 4px;
+}

@@ -1,0 +1,23 @@
+.statistics-section {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0 50px 0;
+}
+
+.statistics-section .stat-box {
+    padding: 16px;
+    max-width: 265px;
+    text-align: center;
+}
+
+.statistics-section .stat-box h2 {
+    font-size: 4.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.statistics-section .stat-box p {
+    color: var(--front-color);
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}

@@ -1,0 +1,50 @@
+.serum-section {
+    text-align: center;
+}
+
+.serum-section .serum-subtitle {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: var(--front-color);
+}
+
+.serum-section .serum-title {
+    font-weight: bold;
+    font-size: 4.6rem;
+    margin-bottom: 40px;
+}
+
+.serum-section .serum-card {
+    flex: 0 1 auto;
+    text-align: center;
+    background: white;
+    scroll-snap-align: center;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.serum-section .serum-card img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.serum-section .serum-card h3 {
+    font-weight: 600;
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+.serum-section .serum-card p {
+    line-height: 1.6;
+    font-size: 1.6rem;
+    color: var(--front-color);
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .serum-section .serum-card {
+        flex: 0 0 310px;
+    }
+}

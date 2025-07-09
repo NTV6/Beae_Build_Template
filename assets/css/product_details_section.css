@@ -1,0 +1,210 @@
+.product-details-section {
+    padding: 80px 0;
+}
+
+.product-details-section .show-image {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+    border-radius: 50%;
+    background-color: rgba(236, 236, 236, 0.5);
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    cursor: zoom-in;
+}
+
+.product-details-section .show-image:hover {
+    cursor: zoom-in;
+    box-shadow: 0 0 10px rgba(185, 185, 185, 0.5);
+}
+
+.product-details-section .thumb-swiper img {
+    width: 100%;
+    padding: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgb(219, 219, 219);
+}
+
+.product-details-section .thumb-swiper .swiper-slide-thumb-active img {
+    border-color: black;
+}
+
+.product-details-section .text-muted {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    color: var(--front-color);
+}
+
+.product-details-section .text-muted .star {
+    font-size: 1rem;
+    margin-right: 5px;
+    color: #FFD737;
+}
+
+.product-details-section .product-name {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.product-details-section .price {
+    display: flex;
+    align-items: center;
+    color: #b02a37;
+    gap: 6px;
+    font-weight: 700;
+    font-size: 2.8rem;
+}
+
+.product-details-section .old-price {
+    text-decoration: line-through;
+    color: rgb(165, 165, 165);
+    font-size: 1.6rem;
+    font-weight: 500;
+
+}
+
+.product-details-section .save-tag {
+    background-color: #b02a37;
+    color: white;
+    font-size: 1.3rem;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+.product-details-section .product-description {
+    font-size: 1.6rem;
+    color: var(--front-color);
+}
+
+.product-details-section .features-list {
+    margin-left: 32px;
+}
+
+.product-details-section .features-list li {
+    margin-bottom: 6px;
+    font-size: 1.6rem;
+    color: var(--front-color);
+}
+
+.product-details-section .info-box {
+    border: 1px solid #E9DEC1;
+    padding: 30px;
+    margin: 20px 0;
+    font-size: 1.6rem;
+    border-radius: 4px;
+    color: var(--front-color);
+}
+
+.product-details-section .info-box i {
+    margin-right: 10px;
+    font-size: 1.9rem;
+    width: 24px;
+    text-align: center;
+}
+
+.product-details-section .size {
+    color: var(--front-color);
+    margin-bottom: 12px;
+    font-size: 1.6rem;
+}
+
+.product-details-section .size-btn {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.product-details-section .size-details-btn {
+    border: 1px solid #ccc;
+    padding: 12px 24px;
+    border-radius: 6px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.product-details-section .size-details-btn.out-of-stock {
+    position: relative;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.product-details-section .size-details-btn.out-of-stock::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -3px;
+    width: 105%;
+    height: 1px;
+    background-color: black;
+    transform: rotate(-19deg);
+}
+
+.product-details-section .size-details-btn.active {
+    background-color: #F9F6EE;
+    color: black;
+    border: 1px solid #99604A;
+}
+
+.product-details-section .quantity {
+    display: flex;
+    align-items: center;
+    color: var(--front-color);
+    border: 1px solid #ccc;
+    font-size: 1.6rem;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.product-details-section .quantity input {
+    width: 38px;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+.product-details-section .btn-reduce,
+.product-details-section .btn-increase {
+    border: none;
+    background: transparent;
+    width: 60px;
+    height: 48px;
+}
+
+.product-details-section .btn-add-cart,
+.product-details-section .btn-buy {
+    width: 100%;
+    padding: 12px 0;
+    font-weight: 700;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.product-details-section .btn-add-cart {
+    background-color: #99604A;
+    border: none;
+}
+
+.product-details-section .btn-buy {
+    background-color: #BF7958;
+    border: none;
+    margin-top: 10px;
+}
+
+.product-details-section .btn-add-cart:hover {
+    background-color: #4D3125;
+}
+
+.product-details-section .btn-buy:hover {
+    background-color: #D3A38D;
+}
