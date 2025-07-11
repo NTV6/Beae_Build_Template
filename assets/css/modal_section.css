@@ -7,18 +7,21 @@
     z-index: 10;
     background-color: #F0F0F0;
 
-    opacity: 0;
+    /* opacity: 0;
     z-index: 0;
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: scale(0.95);
+    transform: scale(0.95); */
+
+    display: none;
 }
 
 .modal-section.show-effect {
-    opacity: 1;
+    /* opacity: 1;
     z-index: 1;
     pointer-events: auto;
-    transform: scale(1);
+    transform: scale(1); */
+    display: block;
 }
 
 .modal-content img {
