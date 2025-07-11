@@ -30,21 +30,21 @@ const btnBuy = document.querySelector(".btn-buy")
 
 
 
-for (let i = 0; i < sizeDetailsBtn.length; i++) {
-    sizeDetailsBtn[i].addEventListener("click", function () {
+sizeDetailsBtn.forEach((btn) => {
+    btn.addEventListener("click", function () {
         sizeDetailsBtn.forEach(btn => btn.classList.remove("active"))
-        sizeDetailsBtn[i].classList.add("active")
+        btn.classList.add("active")
 
-        sizeValue.textContent = sizeDetailsBtn[i].textContent
+        sizeValue.textContent = btn.textContent
 
-        const price = parseFloat(sizeDetailsBtn[i].dataset.price)
-        const old = parseFloat(sizeDetailsBtn[i].dataset.old)
+        const price = parseFloat(btn.dataset.price)
+        const old = parseFloat(btn.dataset.old)
 
         newPrice.textContent = `$${price.toFixed(2)}`
         oldPrice.textContent = `$${old.toFixed(2)}`
 
 
-        if (sizeDetailsBtn[i].classList.contains("out-of-stock")) {
+        if (btn.classList.contains("out-of-stock")) {
             discount.textContent = `Sold Out`;
             btnAddCart.textContent = "SOLD OUT"
             btnBuy.style.cursor = "not-allowed"
@@ -61,7 +61,7 @@ for (let i = 0; i < sizeDetailsBtn.length; i++) {
             discount.style.backgroundColor = "color(srgb 0.741176 0.0509804 0.0509804)"
         }
     })
-}
+})
 
 
 
