@@ -71,7 +71,13 @@ const modalSection = document.querySelector(".modal-section")
 
 closeModal.addEventListener("click", function () {
     modalSection.classList.remove("show-effect");
+    setTimeout(() => {
+        modalSection.style.display = "none";
+    }, 300);
 })
 showImage.addEventListener("click", function () {
-    modalSection.classList.add("show-effect");
+    modalSection.style.display = "block";
+    setTimeout(() => {
+        modalSection.classList.add("show-effect");
+    }, 10);
 })
