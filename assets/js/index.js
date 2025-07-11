@@ -7,6 +7,7 @@ faqItem.forEach((item, i) => {
             itm.classList.remove("active");
             faqIcon[idx].textContent = "+";
             const ans = itm.querySelector(".faq-answer");
+            console.log("a", ans)
             ans.style.maxHeight = "0";
         });
 
@@ -24,13 +25,13 @@ const sizeValue = document.querySelector(".size-value")
 const newPrice = document.querySelector(".new-price")
 const oldPrice = document.querySelector(".old-price")
 const discount = document.querySelector(".discount")
+const btnAddCart = document.querySelector(".btn-add-cart")
+const btnBuy = document.querySelector(".btn-buy")
+
+
 
 for (let i = 0; i < sizeDetailsBtn.length; i++) {
     sizeDetailsBtn[i].addEventListener("click", function () {
-        if (sizeDetailsBtn[i].classList.contains("out-of-stock")) {
-            return
-        }
-        // console.log(` sizeDetailsBtn[i].classList.contains("out-of-stock")`, sizeDetailsBtn[i].classList.contains("out-of-stock"))
         sizeDetailsBtn.forEach(btn => btn.classList.remove("active"))
         sizeDetailsBtn[i].classList.add("active")
 
@@ -42,8 +43,23 @@ for (let i = 0; i < sizeDetailsBtn.length; i++) {
         newPrice.textContent = `$${price.toFixed(2)}`
         oldPrice.textContent = `$${old.toFixed(2)}`
 
-        const percent = Math.floor(((old - price) / old) * 100);
-        discount.textContent = `Save ${percent}%`;
+
+        if (sizeDetailsBtn[i].classList.contains("out-of-stock")) {
+            discount.textContent = `Sold Out`;
+            btnAddCart.textContent = "SOLD OUT"
+            btnBuy.style.cursor = "not-allowed"
+            btnAddCart.style.cursor = "not-allowed"
+            discount.style.backgroundColor = "black"
+            btnAddCart.style.backgroundColor = "rgba(226, 190, 176, 1)"
+        }
+        else {
+            const percent = Math.floor(((old - price) / old) * 100);
+            discount.textContent = `Save ${percent}%`;
+            btnAddCart.style.cursor = "pointer"
+            btnBuy.style.cursor = "pointer"
+            btnAddCart.style.backgroundColor = "rgb(153, 96, 74)"
+            discount.style.backgroundColor = "color(srgb 0.741176 0.0509804 0.0509804)"
+        }
     })
 }
 
@@ -51,16 +67,22 @@ for (let i = 0; i < sizeDetailsBtn.length; i++) {
 
 const btnReduce = document.querySelector(".btn-reduce")
 const btnIncrease = document.querySelector(".btn-increase")
+function isOutOfStock() {
+    return document.querySelector(".size-details-btn.active").classList.contains("out-of-stock");
+}
 
 btnIncrease.addEventListener("click", function () {
     let inputValue = document.querySelector(".quantity input").value
+    if (isOutOfStock()) {
+        return
+    }
     inputValue++
     document.querySelector(".quantity input").value = inputValue
 })
 
 btnReduce.addEventListener("click", function () {
     let inputValue = document.querySelector(".quantity input").value
-    if (inputValue <= 1) {
+    if (inputValue <= 1 || isOutOfStock()) {
         return
     }
     inputValue--

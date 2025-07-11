@@ -1,6 +1,5 @@
 const swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
-    spaceBetween: 30,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -12,7 +11,7 @@ const swiper = new Swiper(".mySwiper", {
         },
         992: {
             slidesPerView: 3,
-            spaceBetween: 20
+            spaceBetween: 30
         },
     },
 });

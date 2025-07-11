@@ -1,7 +1,7 @@
 .faq-section {
     margin: 0 auto;
     max-width: 940px;
-    padding: 80px 16px;
+    padding: 84px 16px;
     text-align: center;
 }
 
@@ -58,8 +58,12 @@
     height: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .faq-answer {
         font-size: 1.4rem;
+    }
+
+    .faq-section {
+        padding: 45px 16px;
     }
 }

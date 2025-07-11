@@ -1,7 +1,7 @@
 .statistics-section {
     display: flex;
     justify-content: space-evenly;
-    padding: 30px 0 50px 0;
+    padding: 36px 0 56px 0;
 }
 
 .statistics-section .stat-box {
@@ -20,4 +20,10 @@
     color: var(--front-color);
     font-size: 1.6rem;
     line-height: 2.4rem;
+}
+
+@media (max-width: 767px) {
+    .statistics-section {
+        padding: 36px 0 36px 0;
+    }
 }

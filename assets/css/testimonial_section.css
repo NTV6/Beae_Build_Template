@@ -1,5 +1,5 @@
 .testimonial-section {
-    padding: 80px 0;
+    padding: 84px 0;
     text-align: center;
     background-color: var(--background-color);
 }
@@ -75,12 +75,16 @@
     border-radius: 999px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .testimonial-card .review-title {
         font-size: 1.4rem;
     }
 
     .testimonial-card {
         min-height: 350px;
+    }
+
+    .testimonial-section {
+        padding: 45px 0;
     }
 }

@@ -1,5 +1,5 @@
 .product-details-section {
-    padding: 80px 0;
+    padding: 84px 0;
 }
 
 .product-details-section .show-image {
@@ -59,6 +59,7 @@
     gap: 6px;
     font-weight: 700;
     font-size: 2.8rem;
+    margin: 0;
 }
 
 .product-details-section .old-price {
@@ -70,7 +71,7 @@
 }
 
 .product-details-section .save-tag {
-    background-color: #b02a37;
+    background-color: color(srgb 0.741176 0.0509804 0.0509804);
     color: white;
     font-size: 1.3rem;
     padding: 4px 12px;
@@ -81,26 +82,32 @@
 
 .product-details-section .product-description {
     font-size: 1.6rem;
+    margin-top: 24px;
+    margin-bottom: 16px;
     color: var(--front-color);
 }
 
 .product-details-section .features-list {
     margin-left: 32px;
+    margin-bottom: 24px;
 }
 
 .product-details-section .features-list li {
-    margin-bottom: 6px;
     font-size: 1.6rem;
     color: var(--front-color);
 }
 
 .product-details-section .info-box {
     border: 1px solid #E9DEC1;
-    padding: 30px;
+    padding: 32px;
     margin: 20px 0;
     font-size: 1.6rem;
     border-radius: 4px;
     color: var(--front-color);
+}
+
+.product-details-section .info-box p:last-child {
+    margin-bottom: 0;
 }
 
 .product-details-section .info-box i {
@@ -132,10 +139,12 @@
     cursor: pointer;
 }
 
+.product-details-section .size-details-btn:hover {
+    border: 1px solid #99604A;
+}
+
 .product-details-section .size-details-btn.out-of-stock {
     position: relative;
-    cursor: not-allowed;
-    opacity: 0.6;
 }
 
 .product-details-section .size-details-btn.out-of-stock::after {
@@ -145,7 +154,7 @@
     left: -3px;
     width: 105%;
     height: 1px;
-    background-color: black;
+    background-color: rgb(146, 146, 146);
     transform: rotate(-19deg);
 }
 
@@ -183,21 +192,20 @@
 .product-details-section .btn-add-cart,
 .product-details-section .btn-buy {
     width: 100%;
-    padding: 12px 0;
+    padding: 16px 0;
     font-weight: 700;
     border-radius: 4px;
     font-size: 1.6rem;
     color: white;
+    border: none;
 }
 
 .product-details-section .btn-add-cart {
     background-color: #99604A;
-    border: none;
 }
 
 .product-details-section .btn-buy {
     background-color: #BF7958;
-    border: none;
     margin-top: 10px;
 }
 
@@ -207,4 +215,10 @@
 
 .product-details-section .btn-buy:hover {
     background-color: #D3A38D;
+}
+
+@media (max-width: 767px) {
+    .product-details-section {
+        padding: 45px 0;
+    }
 }

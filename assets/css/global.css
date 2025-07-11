@@ -1,7 +1,7 @@
 /* Reset CSS */
 :root {
     --front-color: rgb(82, 82, 82);
-    --background-color: #F9F6EF;
+    --background-color: color(srgb 0.976471 0.964706 0.933333);
 
 }
 

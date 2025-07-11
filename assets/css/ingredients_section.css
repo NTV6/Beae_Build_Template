@@ -1,6 +1,6 @@
 .ingredients-section {
     background-color: var(--background-color);
-    padding: 80px 0;
+    padding: 84px 0;
 }
 
 .ingredients-section .ingredients-subtitle {
@@ -38,4 +38,11 @@
 
 .ingredients-section .highlight {
     font-weight: 700;
+}
+
+@media (max-width: 767px) {
+    .ingredients-section {
+        background-color: var(--background-color);
+        padding: 45px 0;
+    }
 }
