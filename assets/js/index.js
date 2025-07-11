@@ -70,8 +70,8 @@ const closeModal = document.querySelector(".close-modal")
 const modalSection = document.querySelector(".modal-section")
 
 closeModal.addEventListener("click", function () {
-    modalSection.style.display = "none"
+    modalSection.classList.remove("show-effect");
 })
 showImage.addEventListener("click", function () {
-    modalSection.style.display = "block"
+    modalSection.classList.add("show-effect");
 })

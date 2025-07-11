@@ -1,5 +1,4 @@
 .modal-section {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -7,6 +6,19 @@
     right: 0;
     z-index: 10;
     background-color: #F0F0F0;
+
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: scale(0.95);
+}
+
+.modal-section.show-effect {
+    opacity: 1;
+    z-index: 1;
+    pointer-events: auto;
+    transform: scale(1);
 }
 
 .modal-content img {
@@ -26,6 +38,12 @@
     line-height: 50px;
     border-radius: 50%;
     z-index: 30;
+
+    transition: transform 0.3s ease;
+}
+
+.close-modal:hover {
+    transform: rotate(90deg);
 }
 
 .swiperModal {
@@ -44,18 +62,35 @@
 }
 
 .custom-pagination {
-    position: absolute;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background: white;
-    left: 50%;
-    bottom: 10px;
-    width: 123px;
-    height: 46px;
-    line-height: 46px;
     border-radius: 999px;
-    font-size: 1.5rem;
-    z-index: 20;
-    transform: translateX(-50%);
     border: 1px solid #d6d6d6;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 132px;
+    height: 46px;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    z-index: 20;
+}
+
+.custom-pagination .arrow {
+    cursor: pointer;
+    padding: 0 12px;
+    user-select: none;
+    color: #222;
+    transition: color 0.2s;
+}
+
+.custom-pagination .arrow:hover {
+    color: #955c44;
+}
+
+.custom-pagination .page-info {
+    margin: 0 8px;
 }

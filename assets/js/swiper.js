@@ -33,15 +33,10 @@ const mainSwiper = new Swiper(".main-swiper", {
     },
 });
 
-
 const swiperModal = new Swiper(".swiperModal", {
     loop: true,
     slidesPerView: 1,
     speed: 600,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
     on: {
         init: function () {
             updateCustomPagination(this);
@@ -55,5 +50,12 @@ const swiperModal = new Swiper(".swiperModal", {
 function updateCustomPagination(swiper) {
     const current = (swiper.realIndex || 0) + 1;
     const total = swiper.slides.length;
-    document.querySelector(".custom-pagination").innerHTML = `${current} / ${total}`;
+    document.querySelector(".custom-pagination .page-info").textContent = `${current} / ${total}`;
 }
+
+document.querySelector(".custom-pagination .prev").addEventListener("click", function () {
+    swiperModal.slidePrev();
+});
+document.querySelector(".custom-pagination .next").addEventListener("click", function () {
+    swiperModal.slideNext();
+});
