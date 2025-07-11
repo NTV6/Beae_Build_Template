@@ -1,17 +1,21 @@
 const faqItem = document.querySelectorAll(".faq-item");
 const faqIcon = document.querySelectorAll(".faq-icon");
 
-for (let i = 0; i < faqItem.length; i++) {
-    faqItem[i].addEventListener("click", function () {
-        faqItem.forEach((item, index) => {
-            item.classList.remove("active")
-            faqIcon[index].textContent = "+"
-        })
+faqItem.forEach((item, i) => {
+    item.addEventListener("click", function () {
+        faqItem.forEach((itm, idx) => {
+            itm.classList.remove("active");
+            faqIcon[idx].textContent = "+";
+            const ans = itm.querySelector(".faq-answer");
+            ans.style.maxHeight = "0";
+        });
 
-        faqItem[i].classList.add("active")
-        faqIcon[i].textContent = "-"
-    })
-}
+        item.classList.add("active");
+        faqIcon[i].textContent = "-";
+        const answer = item.querySelector(".faq-answer");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+    });
+});
 
 
 
